@@ -41,7 +41,7 @@ class Configuration:
     SAVE_TEST_SEGMENT_PREDICTION_IMAGE_COUNT = 30  # number of segments to save after the starting segment. This count is used only if the SAVE_LAYER_OUTPUT_IMAGE is enabled
     HIDDEN_NODES_SLICES_COUNT = 200 #40  # weights visualization for n hidden nodes
 
-    TENSOR_BOARD_MODEL_PATH = 'D:/tesnsorflow_log'
+    TENSOR_BOARD_MODEL_PATH = 'tesnsorflow_log'
 
 class ESC10(Configuration):
     # A model of 85.5% accuarcy
@@ -320,7 +320,7 @@ class HOMBURG(Configuration):
 
 
 class GTZAN(Configuration):
-    DATASET_NAME = 'GTZAN'
+    DATASET_NAME = 'gtzan'
     # CROSS_VALIDATION_FOLDS_COUNT = 10
     CROSS_VALIDATION_FOLDS_COUNT = 3
     INITIAL_FOLD_ID = 0  # the initial fold to start with. This should be zero unless you want to start from another fold
