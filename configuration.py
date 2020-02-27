@@ -322,11 +322,7 @@ class GTZAN(Configuration):
     DATASET_NAME = 'GTZAN'
     CROSS_VALIDATION_FOLDS_COUNT = 10
     INITIAL_FOLD_ID = 0  # the initial fold to start with. This should be zero unless you want to start from another fold
-<<<<<<< HEAD
     PARENT_PATH = '/content/MCLNN-tensorflow/GTZAN-dataset'
-=======
-    PARENT_PATH = 'I:/GTZAN-for-MCLNN'
->>>>>>> parent of 1b7a326... Added dataset processed for 10 genres
 
     COMMON_PATH_NAME = os.path.join(PARENT_PATH, DATASET_NAME + '_folds_' + str(CROSS_VALIDATION_FOLDS_COUNT))
     INDEX_PATH = COMMON_PATH_NAME + '_index'
