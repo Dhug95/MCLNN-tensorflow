@@ -187,10 +187,10 @@ class HOMBURG:
 class GTZAN:
     # file count for the dataset
     AUGMENTATION_VARIANTS_COUNT = 0
-    DATASET_ORIGINAL_FILE_COUNT = 1000
+    DATASET_ORIGINAL_FILE_COUNT = 500
     TOTAL_EXPECTED_COUNT = DATASET_ORIGINAL_FILE_COUNT + DATASET_ORIGINAL_FILE_COUNT * AUGMENTATION_VARIANTS_COUNT
-    SRC_PATH = 'G:/dataset-gtzan/audio'
-    DST_PATH = 'I:/dataset-gtzan'
+    SRC_PATH = '/Users/francesco/Desktop/Sapienza/Corsi/NeuralNetworks/MCLNN/5-genres'
+    DST_PATH = '/Users/francesco/Desktop/Sapienza/Corsi/NeuralNetworks/MCLNN/5-genres-proc'
 
     DATASET_NAME = "gtzan"
     # dataset standard file length of the GTZAN = 30 seconds

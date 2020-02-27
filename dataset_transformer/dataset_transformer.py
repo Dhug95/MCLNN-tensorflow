@@ -1,7 +1,7 @@
 import os
 import h5py
 import time
-# import librosa
+import librosa
 import numpy as np
 from fnmatch import fnmatch
 
@@ -16,11 +16,11 @@ import configuration
 # Config = configuration.URBANSOUND8K
 # Config = configuration.YORNOISE
 # Config = configuration.HOMBURG
-# Config = configuration.GTZAN
+Config = configuration.GTZAN
 # Config = configuration.ISMIR2004
 # Config = configuration.BALLROOM
 
-Config = configuration.PREDICTION
+# Config = configuration.PREDICTION
 
 
 
@@ -30,36 +30,32 @@ def store(file_handle, file_key, clip_list, sample_rate_list, short_count):
         file_key += 1
         sr = sample_rate_list[i]
         # Passing through arguments to the Mel filters
-        # mel_spec = librosa.feature.melspectrogram(y=clip, sr=sr, n_mels=Config.MEL_FILTERS_COUNT
-        #                                           , n_fft=Config.FFT_BINS, hop_length=Config.HOP_LENGTH_IN_SAMPLES)
+        mel_spec = librosa.feature.melspectrogram(y=clip, sr=sr, n_mels=Config.MEL_FILTERS_COUNT,n_fft=Config.FFT_BINS, hop_length=Config.HOP_LENGTH_IN_SAMPLES)
         #
         # # Convert to log scale (dB), peak power is a reference.
-        # log_mel_spec = librosa.logamplitude(mel_spec, ref_power=np.max)
+        log_mel_spec = librosa.core.amplitude_to_db(mel_spec, ref=np.max)
         #
         # if Config.INCLUDE_DELTA == True:
         #     delta_log_mel_spec = librosa.feature.delta(log_mel_spec, width=9, order=1, axis=-1, trim=True)
 
-        # print('File: ' + str(file_key) + ' at SR:' + str(sr) + ' - Duration is :' + str(
-        #     clip.shape[0] / sr) + ' sec - Spec size :' + str(mel_spec.shape))
+        print('File: ' + str(file_key) + ' at SR:' + str(sr) + ' - Duration is :' + str(clip.shape[0] / sr) + ' sec - Spec size :' + str(mel_spec.shape))
 
         start = Config.FIRST_FRAME_IN_SLICE  # start of the segment
         end = start + Config.FRAME_NUM  # end of the segment
 
-
-        # if log_mel_spec.shape[1] < Config.FRAME_NUM:
-        #     start = 0
-        #     end = log_mel_spec.shape[1]
-        #     print('SHORT included ' + str(clip.shape[0] / sr) + ' start :' + str(start) + ' <> end :' + str(end))
-        #     short_count += 1
-        # elif Config.FRAME_NUM < log_mel_spec.shape[1] < Config.FRAME_NUM + Config.FIRST_FRAME_IN_SLICE:
-        #     start = log_mel_spec.shape[1] / 2 - (Config.FRAME_NUM / 2)
-        #     end = start + Config.FRAME_NUM
-        #     print('SHORT middle included ' + str(clip.shape[0] / sr) + '  start :' + str(start) + ' <> end :' + str(
-        #             end))
-        #     short_count += 1
+        if log_mel_spec.shape[1] < Config.FRAME_NUM:
+             start = 0
+             end = log_mel_spec.shape[1]
+             print('SHORT included ' + str(clip.shape[0] / sr) + ' start :' + str(start) + ' <> end :' + str(end))
+             short_count += 1
+        elif Config.FRAME_NUM < log_mel_spec.shape[1] < Config.FRAME_NUM + Config.FIRST_FRAME_IN_SLICE:
+             start = log_mel_spec.shape[1] / 2 - (Config.FRAME_NUM / 2)
+             end = start + Config.FRAME_NUM
+             print('SHORT middle included ' + str(clip.shape[0] / sr) + '  start :' + str(start) + ' <> end :' + str(end))
+             short_count += 1
 
 
-        # spectrogram = np.transpose(log_mel_spec[:, start:end])
+        spectrogram = np.transpose(log_mel_spec[:, start:end])
         #
         # if Config.INCLUDE_DELTA == True:
         #     spectrogram_delta = np.transpose(delta_log_mel_spec[:, start:end])

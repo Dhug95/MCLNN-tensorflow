@@ -113,14 +113,16 @@ class HOMBURG:
 
 class GTZAN:
     DATASET = 'gtzan'
-    DST_PATH = 'I:/dataset-gtzan'
-    FOLD_COUNT = 10
+    DST_PATH = '/content/MCLNN-tensorflow/GTZAN-dataset'
+    # FOLD_COUNT = 10
+    FOLD_COUNT = 3
     FOLDER_NAME = DATASET + '_folds_' + str(FOLD_COUNT) + '_index'
     SHUFFLE_CATEGORY_CLIPS = True
     AUGMENTATION_VARIANTS_COUNT = 0
 
     # samples per category following the category order: ('Bl', 'Cl', 'Co', 'Di', 'Hi', 'Ja', 'Me', 'Po', 'Re', 'Ro')
-    CLIP_COUNT_PER_CATEGORY_LIST = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100]
+    # CLIP_COUNT_PER_CATEGORY_LIST = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100]
+    CLIP_COUNT_PER_CATEGORY_LIST = [100, 100, 100, 100, 100]
     BATCH_SIZE_PER_FOLD_ASSIGNMENT = 1
 
 class ISMIR2004:

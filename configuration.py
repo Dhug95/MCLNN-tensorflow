@@ -22,7 +22,8 @@ class Configuration:
     TEST_SEGMENT_INDEX = 500  # test segment index to plot during training
     VALIDATION_SEGMENT_INDEX = 500  # validation segment index to plot during training
 
-    NB_EPOCH = 2000  # maximum number of epochs
+    # NB_EPOCH = 2000  # maximum number of epochs
+    NB_EPOCH = 100
     WAIT_COUNT = 50  # early stopping count
     LEARNING_RATE = 0.0001
     SPLIT_COUNT = 3  # training/testing/validation splits
@@ -320,7 +321,8 @@ class HOMBURG(Configuration):
 
 class GTZAN(Configuration):
     DATASET_NAME = 'GTZAN'
-    CROSS_VALIDATION_FOLDS_COUNT = 10
+    # CROSS_VALIDATION_FOLDS_COUNT = 10
+    CROSS_VALIDATION_FOLDS_COUNT = 3
     INITIAL_FOLD_ID = 0  # the initial fold to start with. This should be zero unless you want to start from another fold
     PARENT_PATH = '/content/MCLNN-tensorflow/GTZAN-dataset'
 
@@ -352,7 +354,8 @@ class GTZAN(Configuration):
     MASK_OVERLAP = [-10, 3]  # the overlap of observation between a hidden node and another for each layer
     EXTRA_FRAMES = 10  # the k extra frames
 
-    CLASS_NAMES = ['Bl', 'Cl', 'Co', 'Di', 'Hi', 'Ja', 'Me', 'Po', 'Re', 'Ro']
+    #CLASS_NAMES = ['Bl', 'Cl', 'Co', 'Di', 'Hi', 'Ja', 'Me', 'Po', 'Re', 'Ro']
+    CLASS_NAMES = ['Bl', 'Cl', 'Co', 'Di', 'Hi']
 
 
 class ISMIR2004(Configuration):

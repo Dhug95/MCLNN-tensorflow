@@ -7,17 +7,17 @@ import configuration
 # =============================================== #
 #    Enable a single configuration from below     #
 # =============================================== #
-Config = configuration.ESC10
+# Config = configuration.ESC10
 # Config = configuration.ESC10AUGMENTED
 # Config = configuration.ESC50
 # Config = configuration.ESC50AUGMENTED
 # Config = configuration.URBANSOUND8K
 # Config = configuration.YORNOISE
 # Config = configuration.HOMBURG
-# Config = configuration.GTZAN
+Config = configuration.GTZAN
 # Config = configuration.ISMIR2004
 # Config = configuration.BALLROOM
-Config = configuration.PREDICTION
+# Config = configuration.PREDICTION
 
 rand.seed(1754157958)
 
