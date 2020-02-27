@@ -5,7 +5,7 @@ import os
 
 
 class Configuration:
-    USE_PRETRAINED_WEIGHTS = False  # True or False - no training is initiated (pre-trained weights are used)
+    USE_PRETRAINED_WEIGHTS = True  # True or False - no training is initiated (pre-trained weights are used)
 
     # IMPORTANT! This flag will affect training epochs.
     # Keep Visualization DISABLED if you need a properly trained model.
@@ -40,7 +40,7 @@ class Configuration:
     SAVE_TEST_SEGMENT_PREDICTION_IMAGE_COUNT = 30  # number of segments to save after the starting segment. This count is used only if the SAVE_LAYER_OUTPUT_IMAGE is enabled
     HIDDEN_NODES_SLICES_COUNT = 200 #40  # weights visualization for n hidden nodes
 
-    TENSOR_BOARD_MODEL_PATH = 'D:/tesnsorflow_log'
+    TENSOR_BOARD_MODEL_PATH = '/content/MCLNN-tensorflow/tesnsorflow_log'
 
 class ESC10(Configuration):
     # A model of 85.5% accuarcy
@@ -322,7 +322,7 @@ class GTZAN(Configuration):
     DATASET_NAME = 'GTZAN'
     CROSS_VALIDATION_FOLDS_COUNT = 10
     INITIAL_FOLD_ID = 0  # the initial fold to start with. This should be zero unless you want to start from another fold
-    PARENT_PATH = 'I:/GTZAN-for-MCLNN'
+    PARENT_PATH = '/content/MCLNN-tensorflow/GTZAN-for-MCLNN'
 
     COMMON_PATH_NAME = os.path.join(PARENT_PATH, DATASET_NAME + '_folds_' + str(CROSS_VALIDATION_FOLDS_COUNT))
     INDEX_PATH = COMMON_PATH_NAME + '_index'

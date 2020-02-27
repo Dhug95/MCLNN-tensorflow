@@ -46,14 +46,14 @@ from visualization import Visualizer
 #      Uncomment a single configuration from below      #
 # ----------------------------------------------------- #
 
-Config = configuration.ESC10  # https://github.com/fadymedhat/ESC10-for-MCLNN
+# Config = configuration.ESC10  # https://github.com/fadymedhat/ESC10-for-MCLNN
 # Config = configuration.ESC10AUGMENTED # https://github.com/fadymedhat/ESC10-augmented-for-MCLNN
 # Config = configuration.ESC50          # https://github.com/fadymedhat/ESC50-for-MCLNN
 # Config = configuration.ESC50AUGMENTED # https://github.com/fadymedhat/ESC50-augmented-for-MCLNN
 # Config = configuration.URBANSOUND8K   # https://github.com/fadymedhat/Urbansound8k-for-MCLNN
 # Config = configuration.YORNOISE       # https://github.com/fadymedhat/YorNoise-for-MCLNN
 # Config = configuration.HOMBURG        # https://github.com/fadymedhat/Homburg-for-MCLNN
-# Config = configuration.GTZAN          # https://github.com/fadymedhat/GTZAN-for-MCLNN
+Config = configuration.GTZAN          # https://github.com/fadymedhat/GTZAN-for-MCLNN
 # Config = configuration.ISMIR2004      # https://github.com/fadymedhat/ISMIR-for-MCLNN
 # Config = configuration.BALLROOM       # https://github.com/fadymedhat/Ballroom-for-MCLNN
 # ===================================================== #
