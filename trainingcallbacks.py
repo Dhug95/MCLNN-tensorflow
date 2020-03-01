@@ -9,6 +9,7 @@ import numpy.ma as ma
 import pylab as pl
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import matplotlib.pyplot as plt
+import datetime
 
 
 
@@ -119,7 +120,7 @@ def prepare_callbacks(configuration, fold_weights_path, data_loader):
         callback_list.append(segment_plot_callback)
 
     log_dir="/content/MCLNN-tensorflow/logs/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
-    tensorboard_callback = k.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=0)
+    tensorboard_callback = keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=0)
     callback_list.append(tensorboard_callback)
 
     return callback_list

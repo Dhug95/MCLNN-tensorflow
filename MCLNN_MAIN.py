@@ -126,7 +126,7 @@ class MCLNNTrainer(object):
         layer_index += 1
         if verbose == True:
             print('Layer' + str(layer_index) +
-                  ' - Type = softmax' +
+                  ' - Type = sigmoid' +
                   ' - Dropout = ' + str(Config.DROPOUT[layer_index]) +
                   ', Initialization = ' + str(Config.WEIGHT_INITIALIZATION[layer_index]) +
                   ', Hidden nodes = ' + str(Config.HIDDEN_NODES_LIST[layer_index]))
@@ -137,7 +137,7 @@ class MCLNNTrainer(object):
                         units=Config.HIDDEN_NODES_LIST[layer_index],
                         name='dense' + str(layer_index)))
 
-        model.add(Activation('softmax', name='softmax' + str(layer_index)))
+        model.add(Activation('sigmoid', name='sigmoid' + str(layer_index)))
 
         if verbose == True:
             model.summary()
