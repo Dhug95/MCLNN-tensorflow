@@ -337,7 +337,7 @@ class GTZAN(Configuration):
 
     STEP_SIZE = 1  # overlap between segments is q minus step_size
     BATCH_SIZE = 600  # the samples in a mini-batch
-    NB_CLASSES = 5  # the number of classes to classify
+    NB_CLASSES = 2  # the number of classes to classify
     DROPOUT = [0.01, 0.35, 0.35, 0.1]  # dropout at the input of each layer
     HIDDEN_NODES_LIST = [220, 200, 50, NB_CLASSES]  # hidden nodes for each layer
     WEIGHT_INITIALIZATION = ['he_normal', 'he_normal', 'glorot_uniform', 'glorot_uniform']
@@ -355,7 +355,7 @@ class GTZAN(Configuration):
     EXTRA_FRAMES = 10  # the k extra frames
 
     #CLASS_NAMES = ['Bl', 'Cl', 'Co', 'Di', 'Hi', 'Ja', 'Me', 'Po', 'Re', 'Ro']
-    CLASS_NAMES = ['Bl', 'Cl', 'Co', 'Di', 'Hi']
+    CLASS_NAMES = ['Bl', 'Cl']
 
 
 class ISMIR2004(Configuration):

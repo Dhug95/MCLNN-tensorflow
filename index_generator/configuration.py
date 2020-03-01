@@ -122,7 +122,7 @@ class GTZAN:
 
     # samples per category following the category order: ('Bl', 'Cl', 'Co', 'Di', 'Hi', 'Ja', 'Me', 'Po', 'Re', 'Ro')
     # CLIP_COUNT_PER_CATEGORY_LIST = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100]
-    CLIP_COUNT_PER_CATEGORY_LIST = [100, 100, 100, 100, 100]
+    CLIP_COUNT_PER_CATEGORY_LIST = [100, 100]
     BATCH_SIZE_PER_FOLD_ASSIGNMENT = 1
 
 class ISMIR2004:

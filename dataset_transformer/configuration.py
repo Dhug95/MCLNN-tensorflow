@@ -4,7 +4,7 @@ class PREDICTION:
     AUGMENTATION_VARIANTS_COUNT = 0
     DATASET_ORIGINAL_FILE_COUNT = 1
     TOTAL_EXPECTED_COUNT = DATASET_ORIGINAL_FILE_COUNT + DATASET_ORIGINAL_FILE_COUNT * AUGMENTATION_VARIANTS_COUNT
-    SRC_PATH = 'D:/pythonspace\lstm_usd_vs_inr'
+    SRC_PATH = 'D:/pythonspace/lstm_usd_vs_inr'
     DST_PATH = 'I:/dataset-prediction'
 
     DATASET_NAME = "usd_vs_inr"
@@ -187,10 +187,10 @@ class HOMBURG:
 class GTZAN:
     # file count for the dataset
     AUGMENTATION_VARIANTS_COUNT = 0
-    DATASET_ORIGINAL_FILE_COUNT = 500
+    DATASET_ORIGINAL_FILE_COUNT = 200
     TOTAL_EXPECTED_COUNT = DATASET_ORIGINAL_FILE_COUNT + DATASET_ORIGINAL_FILE_COUNT * AUGMENTATION_VARIANTS_COUNT
-    SRC_PATH = '/Users/francesco/Desktop/Sapienza/Corsi/NeuralNetworks/MCLNN/5-genres'
-    DST_PATH = '/Users/francesco/Desktop/Sapienza/Corsi/NeuralNetworks/MCLNN/5-genres-proc'
+    SRC_PATH = '/Users/francesco/Desktop/Sapienza/Corsi/NeuralNetworks/MCLNN/2-genres'
+    DST_PATH = '/Users/francesco/Desktop/Sapienza/Corsi/NeuralNetworks/MCLNN/2-genres-proc'
 
     DATASET_NAME = "gtzan"
     # dataset standard file length of the GTZAN = 30 seconds
