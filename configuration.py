@@ -23,9 +23,9 @@ class Configuration:
     VALIDATION_SEGMENT_INDEX = 500  # validation segment index to plot during training
 
     # NB_EPOCH = 2000  # maximum number of epochs
-    NB_EPOCH = 100
+    NB_EPOCH = 50
     WAIT_COUNT = 50  # early stopping count
-    LEARNING_RATE = 0.0001
+    LEARNING_RATE = 0.00001
     SPLIT_COUNT = 3  # training/testing/validation splits
     TRAIN_FOLD_NAME = 'train'
     TEST_FOLD_NAME = 'test'
