@@ -1,5 +1,7 @@
-src_location='/Users/francesco/Desktop/Sapienza/Corsi/NeuralNetworks/MCLNN-ESC/ESC10-trim'
-dst_location='/Users/francesco/Desktop/Sapienza/Corsi/NeuralNetworks/MCLNN-ESC/ESC10-concat'
+# src_location='/Users/francesco/Desktop/Sapienza/Corsi/NeuralNetworks/MCLNN-ESC/ESC10-trim'
+# dst_location='/Users/francesco/Desktop/Sapienza/Corsi/NeuralNetworks/MCLNN-ESC/ESC10-concat'
+src_location='/content/MCLNN-tensorflow/ESC10-dataset/data/ESC10-trim'
+dst_location='/content/MCLNN-tensorflow/ESC10-dataset/data/ESC10-concat'
 
 ffmpeg -f concat -i "$src_location/001 - Dog bark/1-100032-A.txt" -c copy "$dst_location/001 - Dog bark/1-100032-A.wav"
 ffmpeg -f concat -i "$src_location/001 - Dog bark/1-110389-A.txt" -c copy "$dst_location/001 - Dog bark/1-110389-A.wav"

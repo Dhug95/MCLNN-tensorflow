@@ -11,8 +11,10 @@ import librosa
 from fnmatch import fnmatch
 
 
-SRC_PATH = '/Users/francesco/Desktop/Sapienza/Corsi/NeuralNetworks/MCLNN-ESC/ESC10-vanilla/'
-DST_PATH = '/Users/francesco/Desktop/Sapienza/Corsi/NeuralNetworks/MCLNN-ESC/ESC10-trim/'
+# SRC_PATH = '/Users/francesco/Desktop/Sapienza/Corsi/NeuralNetworks/MCLNN-ESC/ESC10-vanilla/'
+# DST_PATH = '/Users/francesco/Desktop/Sapienza/Corsi/NeuralNetworks/MCLNN-ESC/ESC10-trim/'
+SRC_PATH = '/content/ESC10-vanilla/'
+DST_PATH = '/content/MCLNN-tensorflow/ESC10-dataset/data/ESC10-trim/'
 
 
 folder_list = os.listdir(SRC_PATH)

@@ -8,7 +8,8 @@ make sure to configure the source and destination folders before your execute th
 
 import os
 
-DATASET_PATH = '/Users/francesco/Desktop/Sapienza/Corsi/NeuralNetworks/MCLNN-ESC/ESC10-trim'
+# DATASET_PATH = '/Users/francesco/Desktop/Sapienza/Corsi/NeuralNetworks/MCLNN-ESC/ESC10-trim'
+DATASET_PATH = '/content/MCLNN-tensorflow/ESC10-dataset/data/ESC10-trim'
 CONCAT_COUNT = 15
 
 folder_list = os.listdir(DATASET_PATH)
