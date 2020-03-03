@@ -118,4 +118,8 @@ def prepare_callbacks(configuration, fold_weights_path, data_loader):
                                                     data_loader=data_loader)
         callback_list.append(segment_plot_callback)
 
+    log_dir="/content/MCLNN-tensorflow/logs/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+    tensorboard_callback = keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=0)
+
+    callback_list.append(tensorboard_callback)
     return callback_list
