@@ -22,7 +22,7 @@ class Configuration:
     TEST_SEGMENT_INDEX = 500  # test segment index to plot during training
     VALIDATION_SEGMENT_INDEX = 500  # validation segment index to plot during training
 
-    NB_EPOCH = 2000  # maximum number of epochs
+    NB_EPOCH = 200  # maximum number of epochs
     WAIT_COUNT = 50  # early stopping count
     LEARNING_RATE = 0.0001
     SPLIT_COUNT = 3  # training/testing/validation splits
@@ -44,10 +44,10 @@ class Configuration:
 
 class ESC10(Configuration):
     # A model of 85.5% accuarcy
-    DATASET_NAME = 'ESC10'
+    DATASET_NAME = 'esc10'
     CROSS_VALIDATION_FOLDS_COUNT = 5
     INITIAL_FOLD_ID = 0  # the initial fold to start with. This should be zero unless you want to start from another fold
-    PARENT_PATH = 'D:/ESC10-for-MCLNN'
+    PARENT_PATH = '/content/MCLNN-tensorflow/ESC10-dataset/data/ESC10-concat-processed'
 
     COMMON_PATH_NAME = os.path.join(PARENT_PATH, DATASET_NAME + '_folds_' + str(CROSS_VALIDATION_FOLDS_COUNT))
     INDEX_PATH = COMMON_PATH_NAME + '_index'
@@ -56,7 +56,7 @@ class ESC10(Configuration):
     VISUALIZATION_PARENT_PATH = COMMON_PATH_NAME + '_visualization'
 
     DATASET_FILE_PATH = os.path.join(PARENT_PATH,
-                                     'esc10Specmeln_mels=60_nfft=1024_hoplength=512_fmax=NIL_22050hzsampling_FF=4_FN=200_5secsDelta.hdf5')
+                                     'esc10Specmeln_mels=60_nfft=1024_hoplength=512_fmax=NIL_22050hzsampling_FF=4_FN=200_60secsDelta.hdf5')
 
     STEP_SIZE = 1  # overlap between segments is q minus step_size
     BATCH_SIZE = 600  # the samples in a mini-batch

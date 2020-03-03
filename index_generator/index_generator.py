@@ -17,7 +17,7 @@ Config = configuration.ESC10
 # Config = configuration.GTZAN
 # Config = configuration.ISMIR2004
 # Config = configuration.BALLROOM
-Config = configuration.PREDICTION
+# Config = configuration.PREDICTION
 
 rand.seed(1754157958)
 
