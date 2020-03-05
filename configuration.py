@@ -56,7 +56,7 @@ class ESC10(Configuration):
     VISUALIZATION_PARENT_PATH = COMMON_PATH_NAME + '_visualization'
 
     DATASET_FILE_PATH = os.path.join(PARENT_PATH,
-                                     'esc10Specmeln_mels=60_nfft=1024_hoplength=512_fmax=NIL_22050hzsampling_FF=4_FN=200_60secsDelta.hdf5')
+                                     'esc10Specmeln_mels=60_nfft=1024_hoplength=512_fmax=NIL_22050hzsampling_FF=4_FN=200_5secsDelta.hdf5')
 
     STEP_SIZE = 1  # overlap between segments is q minus step_size
     BATCH_SIZE = 300  # the samples in a mini-batch
