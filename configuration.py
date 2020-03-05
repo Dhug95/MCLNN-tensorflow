@@ -22,8 +22,8 @@ class Configuration:
     TEST_SEGMENT_INDEX = 500  # test segment index to plot during training
     VALIDATION_SEGMENT_INDEX = 500  # validation segment index to plot during training
 
-    NB_EPOCH = 50  # maximum number of epochs
-    WAIT_COUNT = 30  # early stopping count
+    NB_EPOCH = 10  # maximum number of epochs
+    WAIT_COUNT = 4  # early stopping count
     LEARNING_RATE = 0.0001
     SPLIT_COUNT = 3  # training/testing/validation splits
     TRAIN_FOLD_NAME = 'train'
@@ -56,7 +56,7 @@ class ESC10(Configuration):
     VISUALIZATION_PARENT_PATH = COMMON_PATH_NAME + '_visualization'
 
     DATASET_FILE_PATH = os.path.join(PARENT_PATH,
-                                     'esc10Specmeln_mels=60_nfft=1024_hoplength=512_fmax=NIL_22050hzsampling_FF=4_FN=200_5secsDelta.hdf5')
+                                     'esc10Specmeln_mels=60_nfft=1024_hoplength=512_fmax=NIL_22050hzsampling_FF=4_FN=200_30secsDelta.hdf5')
 
     STEP_SIZE = 1  # overlap between segments is q minus step_size
     BATCH_SIZE = 300  # the samples in a mini-batch
