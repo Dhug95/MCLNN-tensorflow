@@ -10,7 +10,7 @@ import os
 
 # DATASET_PATH = '/Users/francesco/Desktop/Sapienza/Corsi/NeuralNetworks/MCLNN-ESC/ESC10-trim'
 DATASET_PATH = '/content/MCLNN-tensorflow/ESC10-dataset/data/ESC10-trim'
-CONCAT_COUNT = 2
+CONCAT_COUNT = 6
 
 folder_list = os.listdir(DATASET_PATH)
 folder_list.sort()
