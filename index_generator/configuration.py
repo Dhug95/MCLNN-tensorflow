@@ -16,7 +16,7 @@ class PREDICTION:
 class ESC10:
     DATASET = 'esc10'
     DST_PATH = '/content/MCLNN-tensorflow/ESC10-dataset/data/ESC10-concat-processed'
-    FOLD_COUNT = 5
+    FOLD_COUNT = 3
     FOLDER_NAME = DATASET + '_folds_' + str(FOLD_COUNT) + '_index'
     SHUFFLE_CATEGORY_CLIPS = False
     AUGMENTATION_VARIANTS_COUNT = 0

@@ -27,7 +27,7 @@ class ESC10:
 
     DATASET_NAME = "esc10"
     # dataset standard file length = 5 seconds
-    DEFAULT_DURATION = "60secs"
+    DEFAULT_DURATION = "5secs"
     # at a sampling rate of 22050 sample per second and nfft 1024 overlap 512 > 22050 * 5 sec / 512 = 215 frames
     FIRST_FRAME_IN_SLICE = 4  # to avoid disruptions at the beginning
     FRAME_NUM = 200  # this is enough to avoid disruptions at the end of the clip

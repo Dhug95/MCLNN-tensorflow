@@ -22,8 +22,8 @@ class Configuration:
     TEST_SEGMENT_INDEX = 500  # test segment index to plot during training
     VALIDATION_SEGMENT_INDEX = 500  # validation segment index to plot during training
 
-    NB_EPOCH = 200  # maximum number of epochs
-    WAIT_COUNT = 50  # early stopping count
+    NB_EPOCH = 50  # maximum number of epochs
+    WAIT_COUNT = 30  # early stopping count
     LEARNING_RATE = 0.0001
     SPLIT_COUNT = 3  # training/testing/validation splits
     TRAIN_FOLD_NAME = 'train'
@@ -45,7 +45,7 @@ class Configuration:
 class ESC10(Configuration):
     # A model of 85.5% accuarcy
     DATASET_NAME = 'esc10'
-    CROSS_VALIDATION_FOLDS_COUNT = 5
+    CROSS_VALIDATION_FOLDS_COUNT = 3
     INITIAL_FOLD_ID = 0  # the initial fold to start with. This should be zero unless you want to start from another fold
     PARENT_PATH = '/content/MCLNN-tensorflow/ESC10-dataset/data/ESC10-concat-processed'
 
@@ -59,23 +59,23 @@ class ESC10(Configuration):
                                      'esc10Specmeln_mels=60_nfft=1024_hoplength=512_fmax=NIL_22050hzsampling_FF=4_FN=200_60secsDelta.hdf5')
 
     STEP_SIZE = 1  # overlap between segments is q minus step_size
-    BATCH_SIZE = 600  # the samples in a mini-batch
+    BATCH_SIZE = 300  # the samples in a mini-batch
     NB_CLASSES = 10  # the number of classes to classify
-    DROPOUT = [0.01, 0.5, 0.5, 0.5, 0.1]  # dropout at the input of each layer
-    HIDDEN_NODES_LIST = [300, 200, 100, 100, NB_CLASSES]  # hidden nodes for each layer
+    DROPOUT = [0.01, 0.5, 0.5, 0.1]  # dropout at the input of each layer
+    HIDDEN_NODES_LIST = [300, 100, 100, NB_CLASSES]  # hidden nodes for each layer
     # initialization for each layer
-    WEIGHT_INITIALIZATION = ['he_normal', 'he_normal', 'glorot_uniform', 'glorot_uniform', 'glorot_uniform']
+    WEIGHT_INITIALIZATION = ['he_normal', 'glorot_uniform', 'glorot_uniform', 'glorot_uniform']
 
     # Model layers
-    MCLNN_LAYER_COUNT = 2  # number of MCLNN layers
+    MCLNN_LAYER_COUNT = 1  # number of MCLNN layers
     DENSE_LAYER_COUNT = 2  # number of dense layers
 
     # MCLNN hyperparameters
-    LAYERS_ORDER_LIST = [15, 15]  # the order for each layer
+    LAYERS_ORDER_LIST = [14]  # the order for each layer
     # Type (MCLNN/CLNN) of each layer before pooling
-    LAYER_IS_MASKED = [True, True]  # True: MCLNN, False: CLNN (Bandwidth and Overlap are ignored in this case)
-    MASK_BANDWIDTH = [20, 5]  # the consecutive features enabled at the input for each layer
-    MASK_OVERLAP = [-5, 3]  # the overlap of observation between a hidden node and another for each layer
+    LAYER_IS_MASKED = [True]  # True: MCLNN, False: CLNN (Bandwidth and Overlap are ignored in this case)
+    MASK_BANDWIDTH = [20]  # the consecutive features enabled at the input for each layer
+    MASK_OVERLAP = [-5]  # the overlap of observation between a hidden node and another for each layer
     EXTRA_FRAMES = 40  # the k extra frames beyond the middle frame (included by default)
 
     CLASS_NAMES = ['DB', 'Ra', 'SW', 'BC', 'CT', 'PS', 'He', 'Ch', 'Ro', 'FC']
